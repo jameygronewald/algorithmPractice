@@ -24,3 +24,6 @@ const dirReduc = arr => {
   }
   return arr;
 };
+
+
+console.log(dirReduc(["NORTH", "EAST", "WEST", "SOUTH", "WEST", "WEST"]))
