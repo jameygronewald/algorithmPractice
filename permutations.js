@@ -33,3 +33,5 @@ const permutations = string => {
 console.log(permutations('a'));
 console.log(permutations('ab'));
 console.log(permutations('aabb'));
+console.log(permutations('fjeis'));
+console.log(permutations('aaaaaaaab'));
