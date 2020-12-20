@@ -34,9 +34,12 @@
 // s consists of parentheses only '()[]{}'.
 
 const isValid = s => {
+    s = s.replace(/[a-zA-Z0-9\s]/g, '');
+
     if (s[0] !== '(' && s[0] !== '[' && s[0] !== '{') {
         return false   
     }
+    
     const array = s.split('');
     let i = 1;
     while (i < array.length) {
@@ -55,3 +58,4 @@ console.log(isValid('()[]{}'))
 console.log(isValid('(]'))
 console.log(isValid('([)]'))
 console.log(isValid('{[]}'))
+console.log(isValid('{123[hello]     }'))
