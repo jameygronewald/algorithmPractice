@@ -12,8 +12,8 @@ const mergeSortedArrays = (arr1, arr2) => {
         newArray.push(arr1[i]);
         break;
       } else if (arr2[j] === arr1[i]) {
-        newArray.push(arr2[j]);
-        newArray.push(arr1[i]);
+        newArray.push(arr2[i]);
+        newArray.push(arr1[j]);
         startIndex++;
         break;
       } else {

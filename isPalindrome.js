@@ -14,6 +14,7 @@ const isPalindrome = (str) => {
 console.log(isPalindrome("Taco cat"));
 console.log(isPalindrome("Taco ct"));
 console.log(isPalindrome("racecar"));
+console.log(isPalindrome("Starrats"));
 console.log(
   isPalindrome("574839 fewa jiop po  ij  a w e f 938   4 7          5")
 );
