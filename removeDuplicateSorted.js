@@ -33,18 +33,21 @@
 //     print(nums[i]);
 // }
 
-const removeDuplicates = nums => {
-    let i = 1;
-    while (i < nums.length) {
-        if (nums[i] === nums[i - 1]) {
-            nums.splice(i, 1)
-        } else {
-            i++;
-        }
+const removeDuplicates = (nums) => {
+  let i = 1;
+  while (i < nums.length) {
+    if (nums[i] === nums[i - 1]) {
+      nums.splice(i, 1);
+    } else {
+      i++;
     }
-    return nums
+  }
+  return nums;
 };
 
-
-console.log(removeDuplicates([0, 0, 0, 2, 2, 3, 4, 5, 6, 6, 6, 7, 7, 7, 9, 11]))
-console.log(removeDuplicates([-3, -3, -1, 0, 0, 2, 2, 3, 4, 5, 5, 6, 6, 7, 8, 10]))
+console.log(
+  removeDuplicates([0, 0, 0, 2, 2, 3, 4, 5, 6, 6, 6, 7, 7, 7, 9, 11])
+);
+console.log(
+  removeDuplicates([-3, -3, -1, 0, 0, 2, 2, 3, 4, 5, 5, 6, 6, 7, 8, 10])
+);
