@@ -4,9 +4,8 @@ const mergeSortedArrays = (arr1, arr2) => {
   if (arr1.length === 0) return arr2;
   if (arr2.length === 0) return arr1;
   let newArray = [];
-  let startIndex = 0;
+  let j = 0;
   for (let i = 0; i < arr1.length; i++) {
-    let j = startIndex;
     while (j < arr2.length) {
       if (arr2[j] > arr1[i]) {
         newArray.push(arr1[i]);
@@ -14,11 +13,10 @@ const mergeSortedArrays = (arr1, arr2) => {
       } else if (arr2[j] === arr1[i]) {
         newArray.push(arr2[i]);
         newArray.push(arr1[j]);
-        startIndex++;
+        j++;
         break;
       } else {
         newArray.push(arr2[j]);
-        startIndex++;
         j++;
       }
     }
@@ -27,8 +25,8 @@ const mergeSortedArrays = (arr1, arr2) => {
       return newArray;
     }
   }
-  if (arr2[startIndex]) {
-    newArray = [...newArray, ...arr2.slice(startIndex)];
+  if (arr2[j]) {
+    newArray = [...newArray, ...arr2.slice(j)];
     return newArray;
   }
   return newArray;
