@@ -7,3 +7,4 @@ const printStaircase = numOfStairs => {
 };
 
 printStaircase(10);
+printStaircase(25);
