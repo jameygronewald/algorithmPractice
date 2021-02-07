@@ -1,3 +1,5 @@
+# Write a constructor to represent any rational number and write methods to add, multiply, view, and square rational numbers
+
 from fractions import gcd
 
 def rational_number(n, d):
