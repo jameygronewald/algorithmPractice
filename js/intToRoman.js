@@ -42,3 +42,4 @@ const makeRoman = (num, romanString) => {
 
 console.log(intToRoman(1994));
 console.log(intToRoman(800));
+console.log(intToRoman(3));
