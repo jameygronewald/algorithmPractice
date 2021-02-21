@@ -28,22 +28,22 @@
 const strStr = (haystack, needle) => {
   if (needle.length === 0) return 0;
 
-  let i = 0;
-  while (i < haystack.length) {
-    const start = needle[0];
-    if (haystack[i] !== start) {
-      i++;
-      continue;
-    } else {
-      const compare = haystack.slice(i, i + needle.length);
-      if (compare === needle) return i;
-      else {
-        i++;
-        continue;
-      }
-    }
-  }
-  return -1;
+  return compareStrings(haystack, needle, (returnIndex = 0));
+};
+
+const compareStrings = (string, needle, returnIndex) => {
+  const start = needle[0];
+  let i = string.indexOf(start);
+
+  if (i === -1) return -1;
+  else returnIndex += i;
+
+  const stringToCompare = string.slice(i, i + needle.length);
+
+  if (stringToCompare === needle) return returnIndex;
+  else returnIndex++;
+
+  return compareStrings(string.slice(i + 1), needle, returnIndex);
 };
 
 console.log(strStr('hello', 'll'));
