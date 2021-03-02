@@ -32,4 +32,5 @@ const longestRepetition = s => {
 }
 
 
-console.log(longestRepetition('aajjddijiikiljjjjjmnnsiodlllllllllplisejaajsfknknn'))
+console.log(longestRepetition('aajjddijiikiljjjjjmnnsiodlllllllllplisejaajsfknknn')) // ['l', 9]
+console.log(longestRepetition('')) // ['', 0]
